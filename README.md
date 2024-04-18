@@ -115,3 +115,21 @@ X. Detrend a Time Series
 Detrending a time series means to remove the trend component from the time series. There are multiple approaches of doing this as listed below:
 
 Subtract the line of best fit from the time series. The line of best fit may be obtained from a linear regression model with the time steps as the predictor. For more complex trends, we may want to use quadratic terms (x^2) in the model.We subtract the trend component obtained from time series decomposition. Subtract the mean. Apply a filter like Baxter-King filter(statsmodels.tsa.filters.bkfilter) or the Hodrick-Prescott Filter (statsmodels.tsa.filters.hpfilter) to remove the moving average trend lines or the cyclical components.
+
+Modelling
+ML Models
+Main Models
+
+AR
+MA
+ARMA
+ARIMA
+SARIMA
+EXPONENTIAL SMOTHING
+
+EM model [single/double/triple]
+EM -- HOLT WINTERS MODEL
+Nueral Networks
+
+RNN
+LSTM
