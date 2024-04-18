@@ -37,3 +37,6 @@ IV. Time Series Analysis and Forcasting
 
 V. Visualisation 
 
+![Capture](https://github.com/sspheng/Time-Series-Forcasting/assets/78303183/4524404d-f1c8-4ee6-85c4-461ac23f4764)
+
+
