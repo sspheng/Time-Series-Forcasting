@@ -100,7 +100,7 @@ Differencing the Series
 
 If Y_t is the value at time t, then the first difference of Y = Yt – Yt-1. In simpler terms, differencing the series is nothing but subtracting the next value by the current value. If the first difference doesn’t make a series stationary, we can go for the second differencing and so on. For example, consider the following series: [1, 5, 2, 12, 20] First differencing gives: [5-1, 2-5, 12-2, 20-12] = [4, -3, 10, 8]. Second differencing gives: [-3-4, -10-3, 8-10] = [-7, -13, -2]
 
-XI Testing for stationarity? 
+XI Testing for stationarity 
 
 The stationarity of a series can be checked by looking at the plot of the series. Another method is to split the series into 2 or more contiguous parts and computing the summary statistics like the mean, variance and the autocorrelation. If the stats are quite different, then the series is not likely to be stationary. There are several quantitative methods we can use to determine if a given series is stationary or not. This can be done using statistical tests called Unit Root Tests. This test checks if a time series is non-stationary and possess a unit root. There are multiple implementations of Unit Root tests like:
 
@@ -115,6 +115,8 @@ X. Detrend a Time Series
 Detrending a time series means to remove the trend component from the time series. There are multiple approaches of doing this as listed below:
 
 Subtract the line of best fit from the time series. The line of best fit may be obtained from a linear regression model with the time steps as the predictor. For more complex trends, we may want to use quadratic terms (x^2) in the model.We subtract the trend component obtained from time series decomposition. Subtract the mean. Apply a filter like Baxter-King filter(statsmodels.tsa.filters.bkfilter) or the Hodrick-Prescott Filter (statsmodels.tsa.filters.hpfilter) to remove the moving average trend lines or the cyclical components.
+
+
 
 Modelling
 ML Models
