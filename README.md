@@ -1,8 +1,8 @@
-WHAT IS TIME SERIES FORECASTING ?
+I. WHAT IS TIME SERIES FORECASTING ?
 
 Time series forecasting is a techniques for the prediction of events through a sequence of time. The techniques predict future events by analyzing the trends of the past, on the assumption that future trends will hold similar to historical trends. “The purpose of time series analysis is generally twofold: to understand or model the stochastic mechanisms that gives rise to an observed series and to predict or forecast the future values of a series based on the history of that series.”
 
-Components of a Time-Series
+II. Components of a Time-Series
 
 1. Level :The average value in the series
 
@@ -14,7 +14,7 @@ Components of a Time-Series
 
 * There are 4 Variations of Time Series are Seasonal variations; Trend Variation; Cyclic Variations; rabdom Variations
 
-Time Series terminology 
+III. Time Series terminology 
 
 There are various terms and concepts in time series that we should know. These are as follows:-
 
@@ -31,3 +31,6 @@ There are various terms and concepts in time series that we should know. These a
 6 Curve fitting - Curve fitting regression in time series analysis is used when data is in a non-linear relationship.
 
 7 ARIMA - ARIMA stands for Auto Regressive Integrated Moving Average.
+
+IV. Time Series Analysis and Forcasting
+
