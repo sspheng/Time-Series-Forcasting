@@ -94,4 +94,24 @@ We can apply some sort of transformation to make the time-series stationary. The
 
 + Combination of the above
 
-The most commonly used and convenient method to stationarize the series is by differencing the series at least once until it becomes approximately stationar
+The most commonly used and convenient method to stationarize the series is by differencing the series at least once until it becomes approximately stationary.
+
+Differencing the Series
+
+If Y_t is the value at time t, then the first difference of Y = Yt – Yt-1. In simpler terms, differencing the series is nothing but subtracting the next value by the current value. If the first difference doesn’t make a series stationary, we can go for the second differencing and so on. For example, consider the following series: [1, 5, 2, 12, 20] First differencing gives: [5-1, 2-5, 12-2, 20-12] = [4, -3, 10, 8]. Second differencing gives: [-3-4, -10-3, 8-10] = [-7, -13, -2]
+
+XI Testing for stationarity? 
+
+The stationarity of a series can be checked by looking at the plot of the series. Another method is to split the series into 2 or more contiguous parts and computing the summary statistics like the mean, variance and the autocorrelation. If the stats are quite different, then the series is not likely to be stationary. There are several quantitative methods we can use to determine if a given series is stationary or not. This can be done using statistical tests called Unit Root Tests. This test checks if a time series is non-stationary and possess a unit root. There are multiple implementations of Unit Root tests like:
+
+1. Augmented Dickey Fuller test (ADF Test): The most commonly used test to detect stationarity is ADF Testing. Here, we assume that the null hypothesis is the time series possesses a unit root and is non-stationary. Then, we collect evidence to support or reject the null hypothesis. So, if we find that the p-value in ADF test is less than the significance level (0.05), we reject the null hypothesis.
+
+2. Kwiatkowski-Phillips-Schmidt-Shin – KPSS test (trend stationary): The KPSS test, on the other hand, is used to test for trend stationarity. The null hypothesis and the P-Value interpretation is just the opposite of ADH test.
+
+3. Philips Perron test (PP Test):The Philips Perron or PP test is a unit root test. It is used in the time series analysis to test the null hypothesis that a time series is integrated of order 1. It is built on the ADF test discussed above.
+
+X. Detrend a Time Series
+
+Detrending a time series means to remove the trend component from the time series. There are multiple approaches of doing this as listed below:
+
+Subtract the line of best fit from the time series. The line of best fit may be obtained from a linear regression model with the time steps as the predictor. For more complex trends, we may want to use quadratic terms (x^2) in the model.We subtract the trend component obtained from time series decomposition. Subtract the mean. Apply a filter like Baxter-King filter(statsmodels.tsa.filters.bkfilter) or the Hodrick-Prescott Filter (statsmodels.tsa.filters.hpfilter) to remove the moving average trend lines or the cyclical components.
