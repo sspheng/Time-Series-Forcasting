@@ -46,8 +46,6 @@ VI Decompose Time Series
 ![Capture](https://github.com/sspheng/Time-Series-Forcasting/assets/78303183/1ffbf113-5c4a-41c2-b6b0-6a1cb0afb662)
 
 
-
-
 plt.figure(figsize=(10,10))
 plt.subplot(411)
 plt.plot(ts_log, label='Original')
@@ -67,8 +65,10 @@ plt.legend(loc='best')
 
 plt.tight_layout()
 
+![Capture](https://github.com/sspheng/Time-Series-Forcasting/assets/78303183/9ec1d341-2329-485c-9ecd-f0d72437a256)
+
+
 *** Additive and Multiplicative Time Series 
-Table of Contents
 
 We may have different combinations of trends and seasonality. Depending on the nature of the trends and seasonality, a time series can be modeled as an additive or multiplicative time series. Each observation in the series can be expressed as either a sum or a product of the components.
 Additive time series:
