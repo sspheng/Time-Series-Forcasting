@@ -1,8 +1,8 @@
-I. WHAT IS TIME SERIES FORECASTING ?
+A. WHAT IS TIME SERIES FORECASTING ?
 
 Time series forecasting is a techniques for the prediction of events through a sequence of time. The techniques predict future events by analyzing the trends of the past, on the assumption that future trends will hold similar to historical trends. “The purpose of time series analysis is generally twofold: to understand or model the stochastic mechanisms that gives rise to an observed series and to predict or forecast the future values of a series based on the history of that series.”
 
-II. Components of a Time-Series
+B. Components of a Time-Series
 
 1. Level :The average value in the series
 
@@ -14,7 +14,7 @@ II. Components of a Time-Series
 
 * There are 4 Variations of Time Series are Seasonal variations; Trend Variation; Cyclic Variations; rabdom Variations
 
-III. Time Series terminology 
+C. Time Series terminology 
 
 There are various terms and concepts in time series that we should know. These are as follows:-
 
@@ -32,14 +32,14 @@ There are various terms and concepts in time series that we should know. These a
 
 7 ARIMA - ARIMA stands for Auto Regressive Integrated Moving Average.
 
-IV. Time Series Analysis and Forcasting
+D. Time Series Analysis and Forcasting
 ![Capture](https://github.com/sspheng/Time-Series-Forcasting/assets/78303183/6b9b7565-146d-423f-a4d9-0872e341eda2)
 
-V. Visualisation 
+E. Visualisation 
 
 ![Capture](https://github.com/sspheng/Time-Series-Forcasting/assets/78303183/4524404d-f1c8-4ee6-85c4-461ac23f4764)
 
-VI Decompose Time Series 
+F. Decompose Time Series 
 
 ![Capture](https://github.com/sspheng/Time-Series-Forcasting/assets/78303183/871c4c17-9a88-4a4d-b4c7-323ab05a5b1c)
 
@@ -77,13 +77,13 @@ Value = Base Level + Trend + Seasonality + Error
 Multiplicative Time Series:
 Value = Base Level x Trend x Seasonality x Error
 
-VII Stationary and Non-Stationary Time Series 
+G. Stationary and Non-Stationary Time Series 
 
 We will talk about Stationary and Non-Stationary of Time Series. Stationarity is a property of a time series. A stationary series is one where the values of the series is not a function of time. So, the values are independent of time. Hence the statistical properties of the series like mean, variance and autocorrelation are constant over time. Autocorrelation of the series is nothing but the correlation of the series with its previous values. A stationary time series is independent of seasonal effects as well. Now, we will plot some examples of stationary and non-stationary time series for clarity.
 
 ![Capture](https://github.com/sspheng/Time-Series-Forcasting/assets/78303183/d5cc7277-5c9e-4225-a8fc-c4ae6c2ef866)
 
-VIII Make a time series to stationary
+H. Make a time series to stationary
 
 We can apply some sort of transformation to make the time-series stationary. These transformation may include:
 + Differencing the Series (once or more)
@@ -100,7 +100,7 @@ Differencing the Series
 
 If Y_t is the value at time t, then the first difference of Y = Yt – Yt-1. In simpler terms, differencing the series is nothing but subtracting the next value by the current value. If the first difference doesn’t make a series stationary, we can go for the second differencing and so on. For example, consider the following series: [1, 5, 2, 12, 20] First differencing gives: [5-1, 2-5, 12-2, 20-12] = [4, -3, 10, 8]. Second differencing gives: [-3-4, -10-3, 8-10] = [-7, -13, -2]
 
-XI Testing for stationarity 
+I. Testing for stationarity 
 
 The stationarity of a series can be checked by looking at the plot of the series. Another method is to split the series into 2 or more contiguous parts and computing the summary statistics like the mean, variance and the autocorrelation. If the stats are quite different, then the series is not likely to be stationary. There are several quantitative methods we can use to determine if a given series is stationary or not. This can be done using statistical tests called Unit Root Tests. This test checks if a time series is non-stationary and possess a unit root. There are multiple implementations of Unit Root tests like:
 
@@ -110,13 +110,55 @@ The stationarity of a series can be checked by looking at the plot of the series
 
 3. Philips Perron test (PP Test):The Philips Perron or PP test is a unit root test. It is used in the time series analysis to test the null hypothesis that a time series is integrated of order 1. It is built on the ADF test discussed above.
 
-X. Detrend a Time Series
+J. Detrend a Time Series
 
 Detrending a time series means to remove the trend component from the time series. There are multiple approaches of doing this as listed below:
 
 Subtract the line of best fit from the time series. The line of best fit may be obtained from a linear regression model with the time steps as the predictor. For more complex trends, we may want to use quadratic terms (x^2) in the model.We subtract the trend component obtained from time series decomposition. Subtract the mean. Apply a filter like Baxter-King filter(statsmodels.tsa.filters.bkfilter) or the Hodrick-Prescott Filter (statsmodels.tsa.filters.hpfilter) to remove the moving average trend lines or the cyclical components.
 
+K. Deseasonalize a Time Series 
 
+There are multiple approaches to deseasonalize a time series. These approaches are listed below:
+
+Take a moving average with length as the seasonal window. This will smoothen in series in the process.
+
+Seasonal difference the series (subtract the value of previous season from the current value).
+
+Divide the series by the seasonal index obtained from STL decomposition.
+
+If dividing by the seasonal index does not work well, we will take a log of the series and then do the deseasonalizing. We will later restore to the original scale by taking an exponential.
+
+L.  Autocorrelation and Partial Autocorrelation Functions 
+
+Auto-Correlation Function is simply the correlation of a series with its own lags. If a series is significantly autocorrelated, that means, the previous values of the series (lags) may be helpful in predicting the current value. 
+
+Partial Auto-Correlation Function also conveys similar information but it conveys the pure correlation of a series and its lag, excluding the correlation contributions from the intermediate lags.
+
+M. Smoothening a Time Series
+
+Smoothening of a time series may be useful in the following circumstances:
+
+Reducing the effect of noise in a signal get a fair approximation of the noise-filtered series.
+
+The smoothed version of series can be used as a feature to explain the original series itself.
+
+Visualize the underlying trend better.
+
+We can smoothen a time series using the following methods:
+
+Take a moving average
+
+Do a LOESS smoothing (Localized Regression)
+
+Do a LOWESS smoothing (Locally Weighted Regression)
+
+Moving Average
+
+Moving average is the average of a rolling window of defined width. We must choose the window-width wisely, because, large window-size will over-smooth the series. For example, a window-size equal to the seasonal duration (ex: 12 for a month-wise series), will effectively nullify the seasonal effect.
+
+Localized Regression
+
+LOESS, short for ‘Localized Regression’ fits multiple regressions in the local neighborhood of each point. It is implemented in the statsmodels package, where you can control the degree of smoothing using frac argument which specifies the percentage of data points nearby that should be considered to fit a regression model.
 
 Modelling
 ML Models
@@ -135,3 +177,15 @@ Nueral Networks
 
 RNN
 LSTM
+
+Reference and contact info:
+
+https://www.machinelearningplus.com/time-series/time-series-analysis-python/
+
+https://towardsdatascience.com/an-end-to-end-project-on-time-series-analysis-and-forecasting-with-python-4835e6bf050b
+
+https://towardsdatascience.com/time-series-analysis-in-python-an-introduction-70d5a5b1d52a
+
+https://www.digitalocean.com/community/tutorials/a-guide-to-time-series-visualization-with-python-3
+
+https://github.com/sspheng/
