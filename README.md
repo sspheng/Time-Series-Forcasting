@@ -43,6 +43,8 @@ VI Decompose Time Series
 
 ![Capture](https://github.com/sspheng/Time-Series-Forcasting/assets/78303183/871c4c17-9a88-4a4d-b4c7-323ab05a5b1c)
 
+![Capture](https://github.com/sspheng/Time-Series-Forcasting/assets/78303183/1ffbf113-5c4a-41c2-b6b0-6a1cb0afb662)
+
 
 
 
