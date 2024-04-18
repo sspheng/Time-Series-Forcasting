@@ -40,7 +40,29 @@ V. Visualisation
 ![Capture](https://github.com/sspheng/Time-Series-Forcasting/assets/78303183/4524404d-f1c8-4ee6-85c4-461ac23f4764)
 
 VI Decompose Time Series 
+![Capture](https://github.com/sspheng/Time-Series-Forcasting/assets/78303183/871c4c17-9a88-4a4d-b4c7-323ab05a5b1c)
 
+
+
+
+plt.figure(figsize=(10,10))
+plt.subplot(411)
+plt.plot(ts_log, label='Original')
+plt.legend(loc='best')
+
+plt.subplot(412)
+plt.plot(trend, label='Trend')
+plt.legend(loc='best')
+
+plt.subplot(413)
+plt.plot(seasonal,label='Seasonality')
+plt.legend(loc='best')
+
+plt.subplot(414)
+plt.plot(residual, label='Residuals')
+plt.legend(loc='best')
+
+plt.tight_layout()
 
 *** Additive and Multiplicative Time Series 
 Table of Contents
