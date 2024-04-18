@@ -76,3 +76,22 @@ Value = Base Level + Trend + Seasonality + Error
 
 Multiplicative Time Series:
 Value = Base Level x Trend x Seasonality x Error
+
+VII Stationary and Non-Stationary Time Series 
+
+We will talk about Stationary and Non-Stationary of Time Series. Stationarity is a property of a time series. A stationary series is one where the values of the series is not a function of time. So, the values are independent of time. Hence the statistical properties of the series like mean, variance and autocorrelation are constant over time. Autocorrelation of the series is nothing but the correlation of the series with its previous values. A stationary time series is independent of seasonal effects as well. Now, we will plot some examples of stationary and non-stationary time series for clarity.
+
+![Capture](https://github.com/sspheng/Time-Series-Forcasting/assets/78303183/d5cc7277-5c9e-4225-a8fc-c4ae6c2ef866)
+
+VIII Make a time series to stationary
+
+We can apply some sort of transformation to make the time-series stationary. These transformation may include:
++ Differencing the Series (once or more)
+  
++ Take the log of the series
+
++ Take the nth root of the series
+
++ Combination of the above
+
+The most commonly used and convenient method to stationarize the series is by differencing the series at least once until it becomes approximately stationar
