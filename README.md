@@ -33,4 +33,6 @@ There are various terms and concepts in time series that we should know. These a
 7 ARIMA - ARIMA stands for Auto Regressive Integrated Moving Average.
 
 IV. Time Series Analysis and Forcasting
+![Capture](https://github.com/sspheng/Time-Series-Forcasting/assets/78303183/6b9b7565-146d-423f-a4d9-0872e341eda2)
 
+V. 
