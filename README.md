@@ -39,4 +39,15 @@ V. Visualisation
 
 ![Capture](https://github.com/sspheng/Time-Series-Forcasting/assets/78303183/4524404d-f1c8-4ee6-85c4-461ac23f4764)
 
+VI Decompose Time Series 
 
+
+*** Additive and Multiplicative Time Series 
+Table of Contents
+
+We may have different combinations of trends and seasonality. Depending on the nature of the trends and seasonality, a time series can be modeled as an additive or multiplicative time series. Each observation in the series can be expressed as either a sum or a product of the components.
+Additive time series:
+Value = Base Level + Trend + Seasonality + Error
+
+Multiplicative Time Series:
+Value = Base Level x Trend x Seasonality x Error
