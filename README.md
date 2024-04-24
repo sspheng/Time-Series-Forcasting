@@ -81,7 +81,13 @@ G. Stationary and Non-Stationary Time Series
 
 We will talk about Stationary and Non-Stationary of Time Series. Stationarity is a property of a time series. A stationary series is one where the values of the series is not a function of time. So, the values are independent of time. Hence the statistical properties of the series like mean, variance and autocorrelation are constant over time. Autocorrelation of the series is nothing but the correlation of the series with its previous values. A stationary time series is independent of seasonal effects as well. Now, we will plot some examples of stationary and non-stationary time series for clarity.
 
-![Capture](https://github.com/sspheng/Time-Series-Forcasting/assets/78303183/d5cc7277-5c9e-4225-a8fc-c4ae6c2ef866)
+**There are reasons why we want to convert a non-stationary series into a stationary one. These are given below:
+
+a. Forecasting a stationary series is relatively easy and the forecasts are more reliable.
+
+b. An important reason is, autoregressive forecasting models are essentially linear regression models that utilize the lag(s) of the series itself as predictors.
+
+c. We know that linear regression works best if the predictors (X variables) are not correlated against each other. So, stationarizing the series solves this problem since it removes any persistent autocorrelation, thereby making the predictors(lags of the series) in the forecasting models nearly independent.
 
 H. Make a time series to stationary
 
