@@ -2,6 +2,15 @@ A. WHAT IS TIME SERIES FORECASTING ?
 
 Time series forecasting is a techniques for the prediction of events through a sequence of time. The techniques predict future events by analyzing the trends of the past, on the assumption that future trends will hold similar to historical trends. “The purpose of time series analysis is generally twofold: to understand or model the stochastic mechanisms that gives rise to an observed series and to predict or forecast the future values of a series based on the history of that series.”
 
+**Type of Time series data
+exogenous variables
+
+endogenous and exogenous variable
+
+ARIMA ARIMAX
+
+SARIMA SARIMAX
+
 B. Components of a Time-Series
 
 1. Level :The average value in the series
